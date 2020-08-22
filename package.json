@@ -10,16 +10,11 @@
     "axios": "^0.19.2",
     "bootstrap": "^4.5.2",
     "font-awesome": "^4.7.0",
-    "radium": "^0.26.0",
     "react": "^16.13.1",
-    "react-animations": "^1.0.0",
     "react-cypher-text-loop": "^1.1.0",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
-    "react-share": "^4.2.1",
-    "react-toastify": "^6.0.8",
-    "react-transition-group": "^1.2.1",
-    "toastify": "^2.0.1"
+    "react-share": "^4.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
