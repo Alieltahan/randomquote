@@ -1,21 +1,16 @@
+* {
+  margin: 1px;
+  padding: 1px;
+  list-style: none;
+  vertical-align: baseline;
+}
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #093691;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,15 +19,95 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.quoteBox {
+  background-color: #093691;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+
+  margin: auto;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: 1s;
+}
+.quoteAuthor {
+  justify-content: center;
+  text-align: right;
+  font-size: 1em;
 }
 
-@keyframes App-logo-spin {
+#quote-box {
+  font-size: 1em;
+  position: relative;
+  display: table;
+  width: 50vw;
+  height: 30vh;
+  border-radius: 50px;
+  padding: 20px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+#tweet-quote {
+  justify-content: center;
+}
+
+#buttonsBlock {
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-top: 80px;
+}
+
+#share-buttons {
+  margin: auto;
+  text-align: left;
+}
+.button-padding {
+  padding: 1.5px;
+}
+.button-padding:hover {
+  opacity: 0.5;
+}
+.opacity-hide {
+  transition: 1s ease-in-out;
+  transition-property: "opacity";
+  opacity: 0;
+}
+.opacity-show {
+  transition: 1s ease-in-out;
+  opacity: 1;
+}
+#new-quote {
+  margin: auto;
+  text-align: end;
+  margin-bottom: 10px;
+}
+#center {
+  padding: 70px 0;
+  align-items: flex-end;
+}
+.fade {
+  animation: fade-in-keyframes 1.5s;
+  animation: fade-out-keyframes 1.5s;
+}
+@keyframes fade-in-keyframes {
   from {
-    transform: rotate(0deg);
+    opacity: 1;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+@keyframes fade-out-keyframes {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
