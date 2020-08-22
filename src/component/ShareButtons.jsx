@@ -21,8 +21,8 @@ function ShareButtons({
   const urlParam = "https://randomquotez.herokuapp.com/";
   return (
     <div className="row">
-      <div title="Share it on Fb" id="share-buttons" className="col">
-        <span className="button-padding">
+      <div id="share-buttons" className="col">
+        <span title="Share it on Fb" className="button-padding">
           <FacebookShareButton url={urlParam} quote={quote}>
             <FacebookIcon size={33} round />
           </FacebookShareButton>
