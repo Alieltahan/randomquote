@@ -1,6 +1,8 @@
-* {
-  margin: 1px;
-  padding: 1px;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
   list-style: none;
   vertical-align: baseline;
 }
@@ -63,6 +65,9 @@ body {
   padding-top: 80px;
 }
 
+.btn--style {
+  white-space: nowrap;
+}
 #share-buttons {
   margin: auto;
   text-align: left;
@@ -109,5 +114,11 @@ body {
   }
   to {
     opacity: 1;
+  }
+}
+
+@media only screen and min-width(43.75em) {
+  .row {
+    flex-direction: column;
   }
 }

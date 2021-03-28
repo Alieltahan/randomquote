@@ -42,17 +42,17 @@ function ShareButtons({
             <VKIcon size={33} round />
           </VKShareButton>
         </span>
-      </div>
 
-      <div id="new-quote" className="col-5">
-        <button
-          style={{ background: dynamicColor, color: "white" }}
-          onClick={onClick}
-          onAnimationEnd={onAnimationEnd}
-          className="text-right btn m-1"
-        >
-          New Quote
-        </button>
+        <div id="new-quote" className="col-5">
+          <button
+            style={{ background: dynamicColor, color: "white" }}
+            onClick={onClick}
+            onAnimationEnd={onAnimationEnd}
+            className="btn btn--style m-1"
+          >
+            New Quote
+          </button>
+        </div>
       </div>
     </div>
   );
