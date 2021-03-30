@@ -2,8 +2,8 @@ import App from "./App";
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import "font-awesome/css/font-awesome.css";
-import "bootstrap/dist/css/bootstrap.css";
+// import "font-awesome/css/font-awesome.css";
+// import "bootstrap/dist/css/bootstrap.css";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(

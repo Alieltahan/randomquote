@@ -21,38 +21,37 @@ function ShareButtons({
   const urlParam = "https://randomquotez.herokuapp.com/";
   return (
     <div className="row">
-      <div id="share-buttons" className="col">
-        <span title="Share it on Fb" className="button-padding">
+      <div id="share-buttons">
+        <span title="Share it on Fb">
           <FacebookShareButton url={urlParam} quote={quote}>
             <FacebookIcon size={33} round />
           </FacebookShareButton>
         </span>
-        <span title="Tweet this Quote!" className="button-padding">
+        <span title="Tweet this Quote!">
           <TwitterShareButton url={urlParam} title={quote}>
             <TwitterIcon size={33} round />
           </TwitterShareButton>
         </span>
-        <span title="Share it with someone" className="button-padding">
+        <span title="Share it with someone">
           <WhatsappShareButton url={urlParam} title={quote}>
             <WhatsappIcon size={33} round />
           </WhatsappShareButton>
         </span>
-        <span title="Share it on VK" className="button-padding">
+        <span title="Share it on VK">
           <VKShareButton url={urlParam} title={quote}>
             <VKIcon size={33} round />
           </VKShareButton>
         </span>
-
-        <div id="new-quote" className="col-5">
-          <button
-            style={{ background: dynamicColor, color: "white" }}
-            onClick={onClick}
-            onAnimationEnd={onAnimationEnd}
-            className="btn btn--style m-1"
-          >
-            New Quote
-          </button>
-        </div>
+      </div>
+      <div className="new-quote">
+        <button
+          style={{ background: dynamicColor, color: "white" }}
+          onClick={onClick}
+          onAnimationEnd={onAnimationEnd}
+          id="btn-quote"
+        >
+          New Quote
+        </button>
       </div>
     </div>
   );

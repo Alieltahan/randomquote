@@ -19,9 +19,9 @@ class Quotes extends Component {
 
   colors = [
     "#16a085",
-    "#27ae60",
     "#2c3e50",
     "#f39c12",
+    "#27ae60",
     "#e74c3c",
     "#9b59b6",
     "#FB6964",
@@ -39,6 +39,7 @@ class Quotes extends Component {
     const { data } = await getQuotes();
     this.setState({ quotes: data, quoteIndex: this.getQuoteIndex() });
   }
+
   handleClick = () => {
     this.setState({ fade: true });
     const dynamicColor = this.colors[
@@ -50,6 +51,7 @@ class Quotes extends Component {
       dynamicColor,
     });
   };
+
   handleAnimationEnd = () => {
     this.setState({ fade: false });
   };
@@ -58,7 +60,7 @@ class Quotes extends Component {
     const { quoteIndex, quotes, dynamicColor, fade } = this.state;
     let cypherArray = [
       `Check Your Lucky Quote For The Day!`,
-      `Keep Going Till Your Find It`,
+      `Keep Going Till You Find It`,
       `There Are More Than 26K Quote!`,
       `It's Totally Random...`,
     ];
@@ -75,7 +77,10 @@ class Quotes extends Component {
         }}
         className=" shadow p-3 mb-5 bg-white"
       >
-        <span style={{ fontSize: 18, transitionDuration: 1 }}>
+        <span
+          className="cypherArray"
+          style={{ fontSize: 18, transitionDuration: 1 }}
+        >
           <CypherText delay={12000} textList={cypherArray} />
         </span>
 

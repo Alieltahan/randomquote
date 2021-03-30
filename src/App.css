@@ -4,12 +4,12 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  vertical-align: baseline;
-}
-.App {
-  text-align: center;
 }
 
+.App {
+  display: flex;
+  justify-content: center;
+}
 .App-header {
   background-color: #093691;
   /* min-height: 100vh; */
@@ -21,12 +21,10 @@
   color: white;
 }
 
-.quoteBox {
-  background-color: #093691;
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
-
-  margin: auto;
+.cypherArray {
+  justify-content: center;
+  margin-bottom: 1rem;
+  color: rgba(0, 0, 0, 0.5);
 }
 body {
   font-family: "Raleway", sans-serif;
@@ -44,37 +42,43 @@ body {
 }
 
 #quote-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-size: 1em;
-  position: relative;
-  display: table;
   width: 50vw;
-  height: 30vh;
-  border-radius: 50px;
-  padding: 20px 20px;
-  text-align: center;
+  height: max-content;
+  border-radius: 50px 10px;
+  padding: 2rem;
   background-color: #fff;
 }
 
-#tweet-quote {
-  justify-content: center;
-}
-
 #buttonsBlock {
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding-top: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
-.btn--style {
+#btn-quote {
   white-space: nowrap;
+  border-radius: 2px 50px;
+  padding: 0.8rem;
+  border: none;
+  outline: none;
 }
 #share-buttons {
-  margin: auto;
-  text-align: left;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  height: 100%;
 }
-.button-padding {
-  padding: 1.5px;
+@media only screen and (max-width: 34.3755em) {
+  #share-buttons {
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
 }
+
 .button-padding:hover {
   opacity: 0.5;
 }
@@ -87,15 +91,20 @@ body {
   transition: 1s ease-in-out;
   opacity: 1;
 }
-#new-quote {
-  margin: auto;
-  text-align: end;
-  margin-bottom: 10px;
+
+.new-quote {
+  width: 100%;
+  height: min-content;
+  display: flex;
+  justify-content: flex-end;
 }
-#center {
-  padding: 70px 0;
-  align-items: flex-end;
+
+@media only screen and (max-width: 43.75em) {
+  .new-quote {
+    margin-right: 0;
+  }
 }
+
 .fade {
   animation: fade-in-keyframes 1.5s;
   animation: fade-out-keyframes 1.5s;
@@ -117,8 +126,17 @@ body {
   }
 }
 
-@media only screen and min-width(43.75em) {
+.row {
+  width: 100%;
+  display: flex;
+  margin-top: 2rem;
+  align-items: center;
+  align-content: center;
+  height: 100%;
+}
+@media only screen and (max-width: 34.3755em) {
   .row {
     flex-direction: column;
+    justify-content: center;
   }
 }
